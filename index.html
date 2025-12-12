@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To 小陈同学</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Noto Serif SC"', 'serif'],
+              handwriting: ['"Ma Shan Zheng"', 'cursive'],
+              english: ['"Cormorant Garamond"', 'serif'],
+              pixel: ['"Press Start 2P"', 'cursive'],
+            },
+            colors: {
+              nature: {
+                50: '#f2fcf5',  // Very light mint
+                100: '#dcfce7',
+                200: '#bbf7d0',
+                300: '#86efac',
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#15803d', // Primary Forest Green
+                700: '#166534',
+                800: '#14532d', // Deep Green
+                900: '#052e16', // Darkest
+              },
+              paper: '#fbfbf8',
+              gameboy: {
+                light: '#e0f8cf',
+                mid: '#86c06c',
+                dark: '#306850',
+                darkest: '#071821',
+              }
+            },
+            animation: {
+              'float-slow': 'float 8s ease-in-out infinite',
+              'sway': 'sway 4s ease-in-out infinite',
+              'pixel-bounce': 'pixel-bounce 1s steps(2, end) infinite',
+              'cursor-blink': 'cursor-blink 1s step-end infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              sway: {
+                 '0%, 100%': { transform: 'rotate(-3deg)' },
+                 '50%': { transform: 'rotate(3deg)' },
+              },
+              'pixel-bounce': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-4px)' },
+              },
+              'cursor-blink': {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        background-color: #fbfbf8; /* Paper color */
+        color: #14532d;
+        overflow-x: hidden;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .pixel-border {
+        box-shadow: 
+          -4px 0 0 0 #14532d,
+          4px 0 0 0 #14532d,
+          0 -4px 0 0 #14532d,
+          0 4px 0 0 #14532d;
+        margin: 4px;
+      }
+      .scanlines {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.05) 50%,
+          rgba(0,0,0,0.05)
+        );
+        background-size: 100% 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
