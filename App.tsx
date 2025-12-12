@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { OpeningScreen } from './components/OpeningScreen';
 import { LetterContent } from './components/LetterContent';
 import { BackgroundEffects } from './components/BackgroundEffects';
-import { MusicFab } from './components/MusicFab';
+import { FullScreenFab } from './components/FullScreenFab';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export default function App() {
     <div className="relative min-h-screen w-full overflow-hidden text-nature-900 font-serif selection:bg-nature-200 selection:text-nature-900">
       <BackgroundEffects />
       
-      <MusicFab />
+      <FullScreenFab />
 
       <AnimatePresence mode="wait">
         {!isOpen ? (
